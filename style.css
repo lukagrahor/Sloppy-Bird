@@ -164,6 +164,7 @@ aside{
     width: 75%;
     border-collapse: collapse;
     font-size: 2.2vh;
+    margin-bottom: 3vh;
 }
 
 th {
