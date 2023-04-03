@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url("Slike/ozadje.png");
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    text-align: center;
+    grid-area: header;
+    background-color: rgba(32, 132, 224, 0.92);
+    height: 6vh;
+    font-size: 2vh;
+    padding: 1vh;
+}
+#menu{
+    width: 30vh;
+    height: 39vh;
+    grid-area: game;
+    margin: auto;
+    width: 50%;
+}
+
+#menuButton{
+    margin-top: 1vh;
+    position: relative;
+    top: 39%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 22vh;
+    height: 5vh;
+    font-size: 2.2vh;
+}
+
+#userInput{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 22vh;
+    height: 5vh;
+    font-size: 1.80vh;
+}
+
+#userName{
+    width: 21.5vh;
+    height: 2.2vh;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+#game{
+    width: 65vh;
+    height: 90vh;
+    margin: auto;
+    overflow: hidden;
+    grid-area: game;
+}
+/* left --> zato, da se pojavijo ovire z desne in ne z leve */
+/* Animacija traja 2 sekunde in se ponavlja */
+#obstacle{
+    width: 10vh;
+    height: 90vh;
+    position: relative;
+    left: 70vh;
+    animation: obstacle 2s infinite linear;
+}
+
+#obstacleImage{
+    width: 10vh;
+    height: 90vh;
+    user-select:none;
+}
+
+/* na začetku bo na levi strani in na koncu bo za širino ovire bolj v levo kot je okvir */
+@keyframes obstacle {
+    0%{left:70vh}
+    100%{left:-10vh}
+}
+
+#space{
+    width: 10vh;
+    height: 25vh;
+    /* background-color: rgba(129, 79, 5, 0.466); */
+    position: relative;
+    left: 70vh;
+    top: -90vh;
+    animation: obstacle 2s infinite linear;
+    overflow: hidden;
+}
+
+#spaceImage{
+    width: 10vh;
+    height: 25vh;
+    user-select:none;
+}
+
+#player{
+    width: 6vh;
+    height: 6vh;
+    position: absolute;
+    top: 30vh;
+    border-radius: 50%;
+}
+
+#playerImage{
+    width: 6vh;
+    height: 6vh;
+    user-select:none
+}
+
+article{
+    grid-area: article;
+    align-self:baseline;
+    background-color: antiquewhite;
+    padding: 1vh;
+    height: 18vh;
+    font-size: 1.8vh;
+}
+
+.sortBtn{
+    text-align: center;
+    position: relative;
+    top: 15%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 3vh;
+    width: 75%;
+    font-size: 1.8vh;
+}
+
+.text{
+    text-align: center;
+}
+
+aside{
+    grid-area: aside;
+    position: relative;
+    height: 30vh;
+    background-color: antiquewhite;
+    padding: 1vh;
+}
+
+#scoreBoard{
+    border: 1px solid black;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 7vh;
+    width: 75%;
+    border-collapse: collapse;
+    font-size: 2.2vh;
+}
+
+th {
+	text-align: center;
+    background-color: #29a4b9;
+    color: #F2F0E1;
+}
+
+td {
+	text-align: center;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    height: 4vh;
+    background-color: rgba(32, 132, 224, 0.89);
+}
+
+/* tablica */
+@media screen and (min-width: 600px){
+    body{
+      display: grid;
+      grid-template-columns: 25% 50% 25%;
+      grid-template-areas:"header header header"
+      "article game game"
+      "aside aside aside"
+      "footer footer footer";
+    }
+
+    article{
+        height: 100%;
+        font-size: 1.9vh;
+        text-align: justify;
+        background-color: rgba(250, 235, 215, 0.6);
+        
+    }
+
+    aside{
+        background-color: rgb(250, 235, 215);
+    }
+
+    #menu{
+        height: 56vh;
+    }
+}
+
+/* računalnik */
+@media screen and (min-width: 1263px){
+    body{
+      display: grid;
+      grid-template-columns: 25% 50% 25%;
+      grid-template-areas:"header header header"
+      "article game aside"
+      "footer footer footer";
+    }
+    
+    article{
+        height: 25.2vh;
+        font-size: 1.9vh;
+        text-align: justify;
+    }
+
+    #menu{
+        height: 88vh;
+    }
+
+    #game{
+        width: 65vh;
+        height:87.8vh;
+    }
+
+    article{
+        background-color: rgba(250, 235, 215, 0.6);
+        height: 35vh;
+    }
+
+    aside{
+        background-color: rgba(250, 235, 215, 0.6);
+        height: 35vh;
+    }
+
+    #scoreBoard{
+        margin-bottom: 3vh;
+    }
+}

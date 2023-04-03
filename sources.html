@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleSource.css">
+    <title>Ducky</title>
+        <link rel="icon" href="slike/duck.png">
+</head>
+<body onclick="jump()">
+    <header>
+        <h1>Sloppy ducky</h1>
+    </header>
+    <div id = "source">
+        <p>Base code for the game: <a href="https://github.com/Beat0154/FlappyBird">link</a> Used as a base for the game</p>
+        <p>Comparator: <a href="https://dmitripavlutin.com/javascript-array-sort-numbers/">link</a> Used to compare score, it wouldn't work properly with a regular array.sort() method</p>
+		<p>window.location.reload(): <a href="https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial/">link</a> Used to refresh the page</p>
+		<p>covertPxtoVh method: <a href="https://www.pixelconverter.com/px-to-vh-converter/">link</a> Used to convert pixels to vh, in order to have a responsive game</p>
+		<p>Adding, removing a player and localStorage: <a href="https://github.com/lukagrahor/ST_vaja3">link</a> Used for the scoreboard. I used the code from vaja3</p>
+		<p>Getting a table row to javascript: <a href="https://www.w3schools.com/jsref/coll_table_rows.asp">link</a> Used to update the table</p>
+		<p>All images are drawn by me</p>
+		
+    </div>
+    <article id = "instructions">
+        <h2>Instructions</h2>
+        <p class="text">Click on the screen to jump. Dodge the tubes or the game will end.<br>The goal of the game is to last as long as possible.<br>
+        Refresh the site to go back to the main menu.<br>You can delete players with their scores on the main menu<br>by double-clicking on a player</p>
+    </article>
+    <aside id = "score">
+        <h2>Scoreboard</h2>
+        <table id="scoreBoard">
+			<tr>
+				<th>Player name</th>
+				<th>Score</th>
+			</tr>
+		</table>
+        <button id="sortName" class = "sortBtn" onclick="sortBtn1()">Sort by name</button>
+        <button id="menuScore" class = "sortBtn" onclick="sortBtn2()">Sort by score</button>
+    </aside>
+    <footer>
+        <h2>Main menu:<a href="index.html">click here</a> Assigment instructions:<a href="https://ucilnica.fri.uni-lj.si/mod/assign/view.php?id=20875">click here</a></h2>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

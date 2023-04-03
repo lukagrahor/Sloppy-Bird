@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ducky</title>
+        <link rel="icon" href="slike/duck.png">
+</head>
+<body onclick="jump()">
+    <header>
+        <h1>Sloppy ducky</h1>
+    </header>
+    <div id ="menu">
+        <p id = "userInput">
+            Enter your username<br>
+            <input type="text" id ="userName" required>
+        </p>
+        <button id="menuButton" onclick="start()">Start the game</button>
+    </div>
+    <div id="game" style="display: none">
+        <div id="obstacle"><img src ="slike/log.png" id = "obstacleImage" alt = "image not found"></div>
+        <div id="space"><img src ="slike/space.png" id = "spaceImage" alt = "image not found"></div>
+        <div id="player"><img src ="slike/duck.png" id = "playerImage" alt = "image not found"></div>
+    </div>
+    <article id = "instructions">
+        <h2>Instructions</h2>
+        <p class="text">Click on the screen to jump. Dodge the tubes or the game will end.<br>The goal of the game is to last as long as possible.<br>
+        Refresh the site to go back to the main menu.<br>You can delete players with their scores on the main menu<br>by double-clicking on a player</p>
+    </article>
+    <aside id = "score">
+        <h2>Scoreboard</h2>
+        <table id="scoreBoard">
+			<tr>
+				<th>Player name</th>
+				<th>Score</th>
+			</tr>
+		</table>
+        <button id="sortName" class = "sortBtn" onclick="sortBtn1()">Sort by name</button>
+        <button id="menuScore" class = "sortBtn" onclick="sortBtn2()">Sort by score</button>
+    </aside>
+    <footer>
+        <h2>Sources:<a href="sources.html">click here</a> Assigment instructions:<a href="https://ucilnica.fri.uni-lj.si/mod/assign/view.php?id=20875">click here</a></h2>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
